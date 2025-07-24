@@ -10,7 +10,7 @@ const Search = () => {
   const [images, setImages] = useState([]);
 
   const apiUrl = 'https://pixabay.com/api';
-  const apiKey = '13882338-d93b145945134ef80bc1b14a3';
+  const apiKey = process.env.REACT_APP_PIXABAY_API_KEY;
 
   const onTextChange = async (e) => {
     const val = e.target.value;
