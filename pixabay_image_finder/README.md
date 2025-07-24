@@ -1,5 +1,24 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Project Changes and Improvements (by Eugene Sulakov)
+
+- Migrated from class-based `Search` component to functional component using React Hooks.
+- Updated React from version 16 to 18 and ReactDOM accordingly.
+- Upgraded `react-scripts` to v5.0.1 for modern JavaScript support (e.g. optional chaining).
+- Replaced deprecated `material-ui` v0.20 with `@mui/material` v5.
+- Removed `MuiThemeProvider` and replaced it with modern `ThemeProvider` from `@mui/material/styles`.
+- Added full dark theme support using MUI theming and `<CssBaseline />`.
+- Updated `index.js` to use `ReactDOM.createRoot()` as recommended in React 18.
+- Fixed bug: changing image amount (`per_page`) now also refreshes the search results.
+- Refactored `onAmountChange` to conditionally re-fetch images via Axios.
+- Added `.catch()` handlers for all Axios requests to handle API errors properly.
+- Fixed critical Webpack 5 crash (`ERR_OSSL_EVP_UNSUPPORTED`) by applying `--openssl-legacy-provider`.
+- Cleaned up unused imports and migrated all JSX to comply with updated React & MUI standards.
+- Refactored `ImageResults.js` to use modern MUI `Card` components instead of custom styles.
+- Manually confirmed all component paths, fixed casing where needed.
+- Structured files consistently: `components/navbar`, с`components/search`, `components/image-results`.
+- Removed legacy service worker logic (still uses `unregister()`).
+
 ## Available Scripts
 
 In the project directory, you can run:
